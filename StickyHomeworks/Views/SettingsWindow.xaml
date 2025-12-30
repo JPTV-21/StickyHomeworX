@@ -103,7 +103,40 @@
                 </ListView.ItemTemplate>
                 <models:ContributionMember
                     AvatarImage="/Assets/Contributiors/HelloWRC@64w.jpg"
-                    Name="HelloWRC" Description="软件作者，写代码巨水（划掉）" />
+                    Name="HelloWRC" Description="软件原作者，写代码巨水（划掉）" />
+            </ListView>
+            <ListView Grid.Row="2" Margin="0 56 0 0"
+                      materialDesign:ListBoxItemAssist.ShowSelection="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate DataType="{x:Type models:ContributionMember}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" VerticalAlignment="Center"
+                                   Margin="0 0 6 0" Source="{Binding AvatarImage}"
+                                   Width="32" Height="32">
+                                <Image.Clip>
+                                    <RectangleGeometry RadiusX="16" RadiusY="16"
+                                                       Rect="0,0,32,32" />
+                                </Image.Clip>
+                            </Image>
+                            <TextBlock Grid.Column="1" TextWrapping="Wrap">
+                                <Run FontSize="15"
+                                     Text="{Binding Name, Mode=OneWay}" />
+                                <LineBreak />
+                                <Run FontSize="11"
+                                     FontWeight="Light"
+                                     Text="{Binding Description, Mode=OneWay}" />
+                            </TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <models:ContributionMember
+                    AvatarImage="/Assets/AppLogo.png"
+                    Name="Wind_Blood" Description="Editor of this version of software" />
             </ListView>
         </Grid>
 
@@ -196,7 +229,7 @@
             <StackPanel Margin="16">
                 <TextBlock Text="实验性功能" Style="{StaticResource MaterialDesignHeadline5TextBlock}"
                            Margin="0 0 0 4"/>
-                <TextBlock Text="正在开发/测试的不稳定功能，可能会出现Bug等问题，请谨慎使用。" TextWrapping="Wrap"
+                <TextBlock Text="正在开发/测试的不稳定功能，很可能会导致 Bug，请谨慎使用...然而目前这里什么都没有。" TextWrapping="Wrap"
                            Margin="0 0 0 16"/>
 
             </StackPanel>
@@ -251,15 +284,15 @@
                             <StackPanel Style="{StaticResource SettingsPageStackPanelStyle}">
                                 <!-- 开机自启 -->
                                 <ely:SettingsCard IconGlyph="AutomaticStart" Header="开机自启"
-                                                       Description="在系统启动时自动运行本应用。"
+                                                       Description="在开机时自动运行本应用。"
                                                        IsOn="{Binding Settings.IsAutoStartEnabled, Mode=TwoWay}" />
                                 <!-- 窗口置底 -->
                                 <ely:SettingsCard IconGlyph="LayersOutline" Header="窗口置底"
-                                                  Description="将窗口置于底端。"
+                                                  Description="将主窗口置于底端。"
                                                   IsOn="{Binding Settings.IsBottom, Mode=TwoWay}" />
                                 <!-- 窗口标题 -->
                                 <ely:SettingsCard IconGlyph="DesktopWindows" Header="窗口标题"
-                                                  Description="在窗口上显示的标题。">
+                                                  Description="在主窗口上显示的标题。">
                                     <ely:SettingsCard.Switcher>
                                         <TextBox MinWidth="150" Text="{Binding Settings.Title}"/>
                                     </ely:SettingsCard.Switcher>
@@ -302,7 +335,7 @@
                                 </ely:SettingsCard>
                                 <!-- 背景透明度 -->
                                 <ely:SettingsCard IconGlyph="SquareTransparent" Header="背景不透明度"
-                                                       Description="课表背景颜色的不透明度。">
+                                                       Description="背景颜色的不透明度。">
                                     <ely:SettingsCard.Switcher>
                                         <Slider Width="180" Minimum="0" Maximum="1"
                                                 Value="{Binding Settings.Opacity}"
@@ -595,11 +628,11 @@
                                         <!-- about -->
                                         <StackPanel Grid.Column="1" Margin="10 0 0 0">
                                             <TextBlock>
-                                                    <Run Text="StickyHomework" FontSize="24" FontWeight="Bold" />
+                                                    <Run Text="StickyHomeworX" FontSize="24" FontWeight="Bold" />
                                                     <LineBreak />
                                                     <Run Text="{x:Static ci:App.AppVersion}" />
                                                     <LineBreak />
-                                                    <Run Text="Copyright (c) 2023 HelloWRC" />
+                                                    <Run Text="Copyright (c) 2025 Wind_Blood" />
                                             </TextBlock>
                                             <WrapPanel>
                                                 <Button HorizontalAlignment="Left" Margin="6"
@@ -634,10 +667,13 @@
                                             关于本应用
                                         </Paragraph>
                                         <Paragraph>
-                                            注意！本应用处于早期开发阶段！大部分功能尚不完善，或存在bug，可能会在后期的版本中完善或修复。饼要一个一个画，功能要一个一个实现（
+                                            注意！本应用处于早期开发阶段！大部分功能尚不完善，或存在 Bug，可能会在后期的版本中完善或修复。
                                         </Paragraph>
                                         <Paragraph>
-                                            别看了，没做完。
+                                            没错，这是一个相比原版几乎啥也没改的垃圾改版。
+                                        </Paragraph>
+                                        <Paragraph>
+                                            原作品：StickyHomeworks - 原作者：HelloWRC
                                         </Paragraph>
                                         <Paragraph Style="{StaticResource MarkdownHeadline2Style}"
                                                    LineHeight="2">
@@ -658,8 +694,8 @@
                                             Work In Progress
                                         </Paragraph>
 
-                                        <Paragraph Foreground="#fff7d1ec">
-                                            永远喜欢爱莉希雅
+                                        <Paragraph Foreground="#ff8648">
+                                            Zda Wei Zdai 开超跑
                                         </Paragraph>
 
                                     </FlowDocument>
@@ -684,7 +720,7 @@
                                 </StackPanel.Resources>
                                 <TextBlock Text="调试" Style="{StaticResource MaterialDesignHeadline5TextBlock}"/>
                                 <TextBlock Margin="0 12">
-                                    <Run Text="仅供调试，除非你能知道您在做什么，请不要使用以下按钮。"></Run>
+                                    <Run Text="这里的功能请不要使用，除非你知道自己在干什么。你为什么在这里？"></Run>
                                 </TextBlock>
 
                                 <MenuItem Icon="{materialDesign:PackIcon BugOutline}" Header="崩溃测试" Click="ButtonCrash_OnClick"/>
