@@ -1,13 +1,9 @@
-# StickyHomeworks
+# StickyHomeworX
 
 > [!warning]
 > 这个项目还在早期开发中
 
-StickyHomeworks 是一款支持富文本的桌面作业贴工具。
-
-![image](https://github.com/HelloWRC/StickyHomeworks/assets/55006226/d6dc1553-d3ff-4905-907c-aba79089fc9a)
-
-> 背景图片来自[Pixiv@辰暮sora](https://www.pixiv.net/artworks/110847880)
+StickyHomeworX 是一款改自 StickyHomeworks 的支持富文本的桌面作业贴工具。
 
 ## 功能
 
@@ -37,21 +33,21 @@ StickyHomeworks 是一款支持富文本的桌面作业贴工具。
 
 > 测试版包含最新的功能，但也可能包含未完善和不稳定的功能，请谨慎使用。
 
-| 下载渠道/通道 | **🚀正式版** <br/>[![GitHub Release](https://img.shields.io/github/v/release/HelloWRC/StickyHomeworks?style=flat-square&logo=GitHub&color=%233fb950)](https://github.com/HelloWRC/ClassIsland/releases/latest)  | 🚧测试版<br/>[![GitHub Release](https://img.shields.io/github/v/release/HelloWRC/StickyHomeworks?include_prereleases&style=flat-square&logo=GitHub&label=BETA)](https://github.com/HelloWRC/ClassIsland/releases/) |
+| 下载渠道/通道 | **🚀正式版** <br/>[![GitHub Release](https://img.shields.io/github/v/release/JPTV-21/StickyHomeworX?style=flat-square&logo=GitHub&color=%233fb950)](https://github.com/JPTV-21/StickyHomeworX/releases)  | 🚧测试版<br/>[![GitHub Release](https://img.shields.io/github/v/release/JPTV-21/StickyHomeworX?include_prereleases&style=flat-square&logo=GitHub&label=BETA)](https://github.com/JPTV-21/StickyHomeworX/releases) |
 | -- | -- | -- |
-| GitHub | [**GitHub下载**](https://github.com/HelloWRC/StickyHomeworks/releases/latest) | [GitHub下载](https://github.com/HelloWRC/StickyHomeworks/releases) |
+| GitHub | [**GitHub下载**](https://github.com/JPTV-21/StickyHomeworX/releases) | [GitHub下载](https://github.com/JPTV-21/StickyHomeworX/releases) |
 
 <!-- > GitHub Releases 还没有同步历史版本。要下载历史版本，请前往[AppCenter](https://install.appcenter.ms/users/hellowrc/apps/classisland/distribution_groups/public/releases/latest)。 -->
 
 ### 3. 解压软件
 
-下载完成后，将软件压缩包解压到一个您喜欢的地方，运行软件即可开始使用。
+下载完成后，将软件放到一个您喜欢的地方（建议为它创建一个单独的文件夹），运行软件即可开始使用。
 
 ## 开发
 
 本应用目前的开发状态：
 
-- 正在[`master`](https://github.com/HelloWRC/StickyHomeworks/tree/master)分支上开发本应用。
+- 正在[`master`](https://github.com/JPTV-21/StickyHomeworX/tree/master)分支上开发本应用。
 
 要在本地编译应用，您需要安装以下负载和工具：
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
@@ -60,7 +56,7 @@ StickyHomeworks 是一款支持富文本的桌面作业贴工具。
 对于Visual Studio，您需要在安装时勾选以下工作负载：
 - .NET 桌面开发
 
-我们欢迎想要为本应用实现新功能或进行改进的同学提交 [Pull Request](https://github.com/HelloWRC/StickyHomeworks/pulls)。
+我们欢迎想要为本应用实现新功能或进行改进的同学提交 [Pull Request](https://github.com/JPTV-21/StickyHomeworX/pulls)。
 
 ## 许可证
 
